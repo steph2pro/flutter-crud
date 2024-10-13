@@ -60,7 +60,79 @@ class I18n {
     );
   }
 
-  /// `Let's continue where we left off.`
+ String get add_post_title {
+    return Intl.message(
+      'add post',
+      name: 'add_post_title',
+      desc: '',
+      args: [],
+    );
+  }
+  String get error {
+    return Intl.message(
+      'error',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+  String get ok {
+    return Intl.message(
+      'OK',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+  String get add_post_subtitle {
+    return Intl.message(
+      'Fill in the information below to add a new post.',
+      name: 'add_post_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+  String get post_title_label {
+    return Intl.message(
+      'Post Title',
+      name: 'post_title_label',
+      desc: '',
+      args: [],
+    );
+  }
+  String get post_title_hint {
+    return Intl.message(
+      'Enter the title of your post',
+      name: 'post_title_hint',
+      desc: '',
+      args: [],
+    );
+  }
+   String get post_content_label {
+    return Intl.message(
+      'Post Content',
+      name: 'post_content_label',
+      desc: '',
+      args: [],
+    );
+  }
+   String get post_content_hint {
+    return Intl.message(
+      'Enter the content of your post',
+      name: 'post_content_hint',
+      desc: '',
+      args: [],
+    );
+  }
+   String get post_submit_btn_label {
+    return Intl.message(
+      'Submit Post',
+      name: 'post_submit_btn_label',
+      desc: '',
+      args: [],
+    );
+  }
+    /// `Let's continue where we left off.`
   String get login_subtitle {
     return Intl.message(
       'Let\'s continue where we left off.',

@@ -14,5 +14,14 @@
 
   "loadingDialog_content": "Please wait...",
 
-  "or": "OR"
+  "or": "OR",
+   "error": "Error",
+  "ok": "OK",
+  "add_post_title": "Add Post",
+  "add_post_subtitle": "Fill in the information below to add a new post.",
+  "post_title_label": "Post Title",
+  "post_title_hint": "Enter the title of your post",
+  "post_content_label": "Post Content",
+  "post_content_hint": "Enter the content of your post",
+  "post_submit_btn_label": "Submit Post"
 }

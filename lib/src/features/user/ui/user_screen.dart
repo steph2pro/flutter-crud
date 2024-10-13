@@ -5,6 +5,7 @@ import '../logic/user_cubit.dart'; // Assurez-vous que le chemin est correct
 import '../../../datasource/repositories/user_repository.dart'; // Importez le UserRepository
 import '../../../shared/locator.dart'; // Importez votre locator
 
+
 @RoutePage()
 class UserScreen extends StatefulWidget implements AutoRouteWrapper {
   const UserScreen({super.key});
@@ -12,13 +13,13 @@ class UserScreen extends StatefulWidget implements AutoRouteWrapper {
   @override
   State<UserScreen> createState() => _UserScreenState();
 
-  @override
-  Widget wrappedRoute(BuildContext context) {
-    return BlocProvider(
-      create: (context) => UserCubit(userRepository: locator<UserRepository>())..loadUsers(),
-      child: this,
-    );
-  }
+   @override
+   Widget wrappedRoute(BuildContext context) {
+     return BlocProvider(
+       create: (context) => UserCubit(userRepository: locator<UserRepository>())..loadUsers(),
+       child: this,
+     );
+   }
 }
 
 class _UserScreenState extends State<UserScreen> {

@@ -11,20 +11,32 @@ final _logInterceptor = LogInterceptor(
   responseBody: true,
 );
 
+// class DioConfig {
+//   final Dio dio;
+
+//   DioConfig({Dio? dio})
+//       : dio = dio ??
+//             Dio(
+//               BaseOptions(
+//                 baseUrl: Environment.baseUrl,
+//                 headers: {
+//                   'Accept': 'application/json',
+//                 },
+//                 contentType: 'application/json',
+//               ),
+//             ) {
+//     this.dio.interceptors.add(_logInterceptor);
+//   }
+// }
 class DioConfig {
   final Dio dio;
 
-  DioConfig({Dio? dio})
-      : dio = dio ??
-            Dio(
-              BaseOptions(
-                baseUrl: Environment.baseUrl,
-                headers: {
-                  'Accept': 'application/json',
-                },
-                contentType: 'application/json',
-              ),
-            ) {
-    this.dio.interceptors.add(_logInterceptor);
+  DioConfig() : dio = Dio() {
+    try {
+      dio.options.baseUrl = 'https://jsonplaceholder.typicode.com'; // Exemple
+      print("DioConfig initialized successfully.");
+    } catch (e) {
+      print("Error initializing DioConfig: $e");
+    }
   }
 }

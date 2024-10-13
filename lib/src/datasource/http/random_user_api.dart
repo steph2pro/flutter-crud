@@ -9,7 +9,7 @@ class RandomUserApi {
   Future<List<UserModel>> fetchRandomUsers() async {
     try {
       // Utilise l'instance dio configurée passée au constructeur
-      final response = await dio.get('/api/?results=10');
+      final response = await dio.get('/api/?results=20');
 
       if (response.statusCode == 200) {
         return (response.data['results'] as List)
